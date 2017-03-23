@@ -19,6 +19,16 @@ CONFIG(release, debug|release) {
   DEFINES += GSL_UNENFORCED_ON_CONTRACT_VIOLATION
 }
 
+CONFIG += debug_and_release
+CONFIG(debug, debug|release) {
+
+  # asserts are removed
+  #DEFINES += NDEBUG
+
+  # Expects and Ensures are removed
+  #DEFINES += GSL_UNENFORCED_ON_CONTRACT_VIOLATION
+}
+
 # GSL
 include(gsl.pri)
 
