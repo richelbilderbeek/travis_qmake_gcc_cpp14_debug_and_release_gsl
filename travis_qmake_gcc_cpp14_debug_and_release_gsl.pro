@@ -26,7 +26,7 @@ CONFIG(debug, debug|release) {
   #DEFINES += NDEBUG
 
   # Expects and Ensures are removed
-  #DEFINES += GSL_UNENFORCED_ON_CONTRACT_VIOLATION
+  DEFINES += GSL_UNENFORCED_ON_CONTRACT_VIOLATION
 }
 
 # GSL
