@@ -1,0 +1,23 @@
+sudo: require
+language: cpp
+compiler: gcc
+
+before_install:
+  # C++14
+  - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
+
+install: 
+  # C++14
+  - sudo apt-get install -qq g++-5
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
+  # GSL
+  - git clone https://github.com/Microsoft/GSL ../
+
+script: 
+  - qmake
+  - make debug
+  - ./travis_qmake_gcc_cpp14_debug_and_release
+  - make release
+  - ./travis_qmake_gcc_cpp14_debug_and_release
+
