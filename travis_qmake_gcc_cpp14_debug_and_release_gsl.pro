@@ -9,7 +9,7 @@ CONFIG += c++14
 QMAKE_CXXFLAGS += -std=c++14
 
 # Debug and release mode
-CONFIG += console debug_and_release
+CONFIG += debug_and_release
 CONFIG(release, debug|release) {
 
   # asserts are removed
