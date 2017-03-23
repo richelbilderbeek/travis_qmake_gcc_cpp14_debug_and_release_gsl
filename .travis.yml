@@ -17,7 +17,7 @@ install:
 script: 
   - qmake
   - make debug
-  - ./travis_qmake_gcc_cpp14_debug_and_release
+  - ./travis_qmake_gcc_cpp14_debug_and_release_gsl
   - make release
-  - ./travis_qmake_gcc_cpp14_debug_and_release
+  - ./travis_qmake_gcc_cpp14_debug_and_release_gsl
 
